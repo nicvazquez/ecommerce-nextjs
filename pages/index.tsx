@@ -1,8 +1,12 @@
-import { Product } from "../interfaces/Product";
+import { PopulaProducts } from "../components/PopularProducts";
+import { Products } from "../interfaces/Products";
 
-export default function Home(products: Product[]) {
-	console.log(products);
-	return <h1>Hello world</h1>;
+export default function Home({ products }: Products) {
+	return (
+		<main>
+			<PopulaProducts products={products} />
+		</main>
+	);
 }
 
 export async function getStaticProps() {

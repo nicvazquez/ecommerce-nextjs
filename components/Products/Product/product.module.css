@@ -36,14 +36,12 @@
 
 @media (min-width: 768px) {
 	.container {
-		display: flex;
-		gap: 2rem;
-		width: 40%;
+		width: 25%;
 	}
 }
 
 @media (min-width: 1300px) {
 	.container {
-		width: 35%;
+		width: 20%;
 	}
 }

@@ -1,11 +1,16 @@
+.section {
+	margin: 2rem 0;
+	width: 100%;
+}
+
 .section h2 {
 	text-align: center;
-	margin: 2rem 0 3rem 0;
 }
 
 .children {
 	display: flex;
 	gap: 5rem;
+	justify-content: center;
 	flex-wrap: wrap;
 	padding: 0 2rem;
 }

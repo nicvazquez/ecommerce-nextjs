@@ -1,5 +1,6 @@
 :root {
 	--primary: #3284e6;
+	--primaryDark: #2073d8;
 }
 
 html,
@@ -30,5 +31,5 @@ p {
 }
 
 .color-grey {
-	color: grey;
+	color: rgb(106, 106, 106);
 }

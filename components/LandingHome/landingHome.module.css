@@ -1,0 +1,37 @@
+.container {
+	height: 35vh;
+	display: grid;
+	grid-template-rows: 40% 60%;
+}
+
+.landingBackground {
+	background-image: url(/assets/landing-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.landingInfo {
+	display: grid;
+	grid-template-columns: 65% 35%;
+	padding: 0 1rem;
+	margin-top: -2rem;
+}
+
+.landingInfo h1 {
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+.landingInfo__buttons button {
+	background-color: #111;
+	border: none;
+	color: white;
+	padding: 2rem;
+	width: 100%;
+}
+
+.landingInfo__buttons button:first-of-type {
+	background-color: var(--secondary);
+	margin-bottom: -1px;
+}

@@ -1,9 +1,12 @@
+import { LandingHome } from "../components/LandingHome/LandingHome";
 import { PopulaProducts } from "../components/Products";
 import { Products } from "../interfaces/Products";
 
 export default function Home({ products }: Products) {
 	return (
 		<main>
+			<LandingHome />
+
 			<PopulaProducts products={products} />
 		</main>
 	);

@@ -21,13 +21,18 @@ export const Product = ({ product }: { product: ProductInterface }) => {
 				</div>
 
 				<p className="color-grey">{product.description.split(".")[0]}.</p>
-				<Rating
-					style={{ marginTop: "1rem" }}
-					initialValue={product.rating.rate}
-					size={20}
-					readonly
-					allowFraction
-				/>
+
+				<div className={styles.rating}>
+					<Rating
+						className={styles.rating__stars}
+						initialValue={product.rating.rate}
+						size={20}
+						tooltipDefaultText={`${product.rating.count}`}
+						readonly
+						allowFraction
+					/>
+					<p className="color-grey">({product.rating.count} reviews)</p>
+				</div>
 
 				<button className={styles.addToCarBtn}>Add to cart</button>
 			</div>

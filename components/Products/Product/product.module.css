@@ -20,6 +20,17 @@
 	font-weight: 600;
 }
 
+.rating {
+	align-items: center;
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.rating__stars span:first-of-type {
+	display: flex;
+}
+
 .addToCarBtn {
 	background-color: var(--primary);
 	border: none;

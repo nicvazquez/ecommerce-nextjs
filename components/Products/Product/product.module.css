@@ -1,0 +1,24 @@
+.container img {
+	margin-bottom: 1.5rem;
+}
+
+.titlePrice {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.price {
+	color: green;
+	font-weight: 600;
+}
+
+.addToCarBtn {
+	background-color: var(--primary);
+	border: none;
+	color: white;
+	margin-top: 2rem;
+	padding: 1rem;
+	width: 100%;
+}

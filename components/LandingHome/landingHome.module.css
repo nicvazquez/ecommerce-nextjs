@@ -1,7 +1,23 @@
 .container {
-	height: 35vh;
+	height: 50vh;
 	display: grid;
 	grid-template-rows: 40% 60%;
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+	.container {
+		grid-template-rows: 50% 50%;
+		height: 100vh;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 1300px) {
+	.container {
+		grid-template-rows: 70% 30%;
+		height: 80vh;
+	}
 }
 
 .landingBackground {
@@ -13,25 +29,85 @@
 
 .landingInfo {
 	display: grid;
-	grid-template-columns: 65% 35%;
+	grid-template-rows: 50% 50%;
 	padding: 0 1rem;
 	margin-top: -2rem;
 }
 
-.landingInfo h1 {
+.landingInfo__text h1 {
 	font-size: 3rem;
 	font-weight: 800;
+}
+
+@media (min-width: 768px) {
+	.landingInfo {
+		min-width: 100%;
+		grid-template-columns: 70% 20%;
+		margin-top: -5rem;
+	}
+	.landingInfo__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.landingInfo__text h1 {
+		font-size: 6rem;
+	}
+	.landingInfo__text h1,
+	.landingInfo__text p {
+		width: 70%;
+	}
+}
+
+@media (min-width: 1300px) {
+	.landingInfo {
+		grid-template-columns: 70% 15%;
+		margin-top: -7rem;
+	}
+	.landingInfo__text h1 {
+		font-size: 8rem;
+	}
+	.landingInfo__text h1,
+	.landingInfo__text p {
+		width: 90%;
+	}
+	.landingInfo__text p {
+		font-size: 1.2rem;
+	}
 }
 
 .landingInfo__buttons button {
 	background-color: #111;
 	border: none;
 	color: white;
+	cursor: pointer;
 	padding: 2rem;
 	width: 100%;
+	transition: 0.1s;
+}
+
+.landingInfo__buttons button:hover {
+	background-color: #222;
 }
 
 .landingInfo__buttons button:first-of-type {
 	background-color: var(--secondary);
 	margin-bottom: -1px;
+}
+
+.landingInfo__buttons button:first-of-type:hover {
+	background-color: var(--secondaryLight);
+}
+
+@media (min-width: 768px) {
+	.landingInfo__buttons button {
+		align-items: center;
+		display: flex;
+		justify-content: space-around;
+		font-size: 1.3rem;
+		padding: 4rem 2rem;
+	}
+	.landingInfo__buttons button span {
+		font-size: 1.8rem;
+	}
 }

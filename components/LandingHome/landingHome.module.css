@@ -1,7 +1,7 @@
 .container {
-	height: 50vh;
+	height: 100vh;
 	display: grid;
-	grid-template-rows: 40% 60%;
+	grid-template-rows: 50% 50%;
 	margin-bottom: 5rem;
 }
 
@@ -28,10 +28,12 @@
 }
 
 .landingInfo {
-	display: grid;
-	grid-template-rows: 50% 50%;
 	padding: 0 1rem;
-	margin-top: -2rem;
+	margin-top: -2.5rem;
+}
+
+.landingInfo__text {
+	margin-bottom: 3rem;
 }
 
 .landingInfo__text h1 {
@@ -41,8 +43,9 @@
 
 @media (min-width: 768px) {
 	.landingInfo {
+		display: grid;
 		min-width: 100%;
-		grid-template-columns: 70% 20%;
+		grid-template-columns: 70% 30%;
 		margin-top: -5rem;
 	}
 	.landingInfo__text {
@@ -52,10 +55,6 @@
 	}
 	.landingInfo__text h1 {
 		font-size: 6rem;
-	}
-	.landingInfo__text h1,
-	.landingInfo__text p {
-		width: 70%;
 	}
 }
 
@@ -81,6 +80,10 @@
 	border: none;
 	color: white;
 	cursor: pointer;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
 	padding: 2rem;
 	width: 100%;
 	transition: 0.1s;
@@ -101,9 +104,6 @@
 
 @media (min-width: 768px) {
 	.landingInfo__buttons button {
-		align-items: center;
-		display: flex;
-		justify-content: space-around;
 		font-size: 1.3rem;
 		padding: 4rem 2rem;
 	}

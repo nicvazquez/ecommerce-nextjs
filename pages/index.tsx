@@ -1,4 +1,4 @@
-import { PopulaProducts } from "../components/PopularProducts";
+import { PopulaProducts } from "../components/Products";
 import { Products } from "../interfaces/Products";
 
 export default function Home({ products }: Products) {

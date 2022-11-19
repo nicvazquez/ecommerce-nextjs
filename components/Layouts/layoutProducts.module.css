@@ -1,0 +1,10 @@
+.section h2 {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.children {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 2rem;
+}

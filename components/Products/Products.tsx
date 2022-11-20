@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ProductInterface } from "../../interfaces";
 import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 import { LayoutProducts } from "../Layouts/LayoutProducts";
+import { ButtonsShowProducts } from "./ButtonsShowProducts";
 import { Categories } from "./Categories";
 import { Product } from "./Product/Product";
 
@@ -17,11 +18,13 @@ export const Products = ({ categories, products }: Props) => {
 		product.category.includes(categoryState)
 	);
 
-	const [productsAmount, setProductsAmount] = useState(4);
+	const productsToShow = 4;
+
+	const [productsAmount, setProductsAmount] = useState(productsToShow);
 
 	const showMoreProducts = () => {
 		if (productsAmount < productsFiltered.length) {
-			setProductsAmount(productsAmount + 4);
+			setProductsAmount(productsAmount + productsToShow);
 		}
 	};
 
@@ -39,21 +42,13 @@ export const Products = ({ categories, products }: Props) => {
 					.slice(0, productsAmount)}
 			</LayoutProducts>
 
-			{productsAmount < productsFiltered.length ? (
-				<button
-					onClick={showMoreProducts}
-					className={`${styles.btnSeeMore} btn-secondary`}
-				>
-					Show more
-				</button>
-			) : (
-				<button
-					onClick={() => setProductsAmount(3)}
-					className={`${styles.btnSeeMore} btn-secondary`}
-				>
-					Hide Products
-				</button>
-			)}
+			<ButtonsShowProducts
+				showMoreProducts={showMoreProducts}
+				productsAmount={productsAmount}
+				productsToShow={productsToShow}
+				setProductsAmount={setProductsAmount}
+				productsFiltered={productsFiltered}
+			/>
 		</section>
 	);
 };

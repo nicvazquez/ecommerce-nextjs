@@ -41,14 +41,25 @@ h2 {
 	color: rgb(106, 106, 106);
 }
 
-.btn-primary {
-	background-color: var(--primary);
+.btn-primary,
+.btn-secondary {
 	border: none;
 	color: white;
 	cursor: pointer;
 	padding: 1rem;
 	transition: 0.2s;
 }
+
+.btn-primary {
+	background-color: var(--primary);
+}
 .btn-primary:hover {
 	background-color: var(--primaryLight);
+}
+
+.btn-secondary {
+	background-color: var(--secondary);
+}
+.btn-secondary:hover {
+	background-color: var(--secondaryDark);
 }

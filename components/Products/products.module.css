@@ -1,8 +1,10 @@
 .container {
-	margin-top: 2rem;
+	display: grid;
+	place-items: center;
+	margin: 2rem 0;
 }
 
-.buttons {
+.buttonsCategories {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
@@ -10,7 +12,7 @@
 	justify-content: center;
 }
 
-.buttons button {
+.buttonsCategories button {
 	background-color: rgb(228, 228, 228);
 	border: none;
 	border-radius: 10px;
@@ -23,4 +25,9 @@
 .selectedBtn {
 	background-color: var(--primary) !important;
 	color: white;
+}
+
+.btnSeeMore {
+	margin-top: 2rem;
+	font-size: 1.2rem;
 }

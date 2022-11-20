@@ -1,8 +1,6 @@
 .section {
 	margin: 2rem 0;
-	width: 100%;
-	display: grid;
-	place-items: center;
+	min-width: 100%;
 }
 
 .section h2 {
@@ -19,7 +17,8 @@
 .children {
 	display: flex;
 	gap: 5rem;
-	justify-content: center;
 	flex-wrap: wrap;
+	justify-content: center;
+	min-width: 100%;
 	padding: 0 2rem;
 }

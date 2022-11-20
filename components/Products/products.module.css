@@ -1,0 +1,26 @@
+.container {
+	margin-top: 2rem;
+}
+
+.buttons {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.buttons button {
+	background-color: rgb(228, 228, 228);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 0.5rem 1.5rem;
+	font-size: 1rem;
+	transition: 0.1s;
+}
+
+.selectedBtn {
+	background-color: var(--primary) !important;
+	color: white;
+}

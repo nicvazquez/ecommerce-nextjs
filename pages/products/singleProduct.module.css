@@ -1,0 +1,43 @@
+.container {
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	padding: 2rem;
+}
+
+.relatedProductsContainer {
+	margin: 3rem 0;
+}
+
+.relatedProducts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.relatedProducts__card {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+	width: 45%;
+}
+
+.relatedProducts__card h4 {
+	color: var(--secondary);
+}
+
+.relatedProducts__card p {
+	font-weight: 700;
+}
+
+@media (min-width: 768px) {
+	.relatedProducts {
+		gap: 3rem;
+		margin-bottom: 2rem;
+	}
+	.relatedProducts__card {
+		width: 15%;
+	}
+}

@@ -11,7 +11,7 @@ interface Props {
 	products: ProductInterface[];
 }
 export const Products = ({ categories, products }: Props) => {
-	const [categoryState, setCategoryState] = useState<string>("electronics");
+	const [categoryState, setCategoryState] = useState<string>("");
 	const productsFiltered = products.filter((product) =>
 		product.category.includes(categoryState)
 	);

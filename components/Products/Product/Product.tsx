@@ -28,7 +28,11 @@ export const Product = ({ product, fullDescription = false }: ProductProps) => {
 				</div>
 
 				<p className="color-grey">
-					{fullDescription ? product.description : product.description.slice(0, 150)}...
+					{fullDescription ? (
+						product.description
+					) : (
+						<span>{product.description.slice(0, 150)}...</span>
+					)}
 				</p>
 
 				<div className={styles.rating}>

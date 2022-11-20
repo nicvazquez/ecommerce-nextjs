@@ -13,6 +13,7 @@ export default function ProductPage({
 				width: "100%",
 				display: "grid",
 				placeItems: "center",
+				padding: "2rem",
 			}}
 		>
 			<Product product={product} fullDescription />

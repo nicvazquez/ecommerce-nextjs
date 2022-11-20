@@ -10,7 +10,18 @@
 	grid-auto-rows: minmax(100px, auto);
 }
 
-.wrapper .card {
+@media (min-width: 768px) {
+	.container {
+		margin: 5rem 0;
+		display: grid;
+		place-items: center;
+	}
+	.wrapper {
+		min-width: 70%;
+	}
+}
+
+.card {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -38,4 +49,25 @@
 	background-image: linear-gradient(#eb01a523, #cb53a9a4), url(/assets/casual.jpg);
 	grid-column: 3 / 5;
 	grid-row: 3 / 5;
+}
+
+@media (min-width: 768px) {
+	.first,
+	.second,
+	.third {
+		transition: 0.5s;
+		cursor: pointer;
+	}
+
+	.first,
+	.second,
+	.third {
+		background-position-y: 30%;
+	}
+
+	.first:hover,
+	.second:hover,
+	.third:hover {
+		background-position-y: 35%;
+	}
 }

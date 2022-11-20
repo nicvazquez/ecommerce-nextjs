@@ -20,7 +20,7 @@ export const ButtonsShowProducts = ({
 			{productsAmount < productsFiltered.length && (
 				<button
 					onClick={showMoreProducts}
-					className={`${styles.btnSeeMore} btn-primary`}
+					className={`${styles.btnSeeMore} btn-secondary`}
 				>
 					Show more
 				</button>
@@ -29,7 +29,7 @@ export const ButtonsShowProducts = ({
 			{productsAmount > productsToShow && (
 				<button
 					onClick={() => setProductsAmount(productsAmount - productsToShow)}
-					className={`${styles.btnSeeMore} btn-secondary`}
+					className={`${styles.btnSeeMore} btn-primary`}
 				>
 					Show Less
 				</button>

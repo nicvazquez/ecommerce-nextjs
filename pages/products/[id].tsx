@@ -1,5 +1,5 @@
 import { Product } from "../../components/Products/Product/Product";
-import { Product as ProductInterface } from "../../interfaces";
+import { ProductInterface } from "../../interfaces";
 
 export default function ProductPage({
 	product,

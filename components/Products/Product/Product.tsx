@@ -1,5 +1,4 @@
-import { Rating } from "react-simple-star-rating";
-import { Product as ProductInterface } from "../../../interfaces";
+import { ProductInterface } from "../../../interfaces";
 import Image from "next/image";
 import styles from "./product.module.css";
 import Link from "next/link";
@@ -29,19 +28,13 @@ export const Product = ({ product, fullDescription = false }: ProductProps) => {
 				</div>
 
 				<p className="color-grey">
-					{fullDescription ? product.description : product.description.split(".")[0]}.
+					{fullDescription ? product.description : product.description.slice(0, 150)}...
 				</p>
 
 				<div className={styles.rating}>
-					<Rating
-						className={styles.rating__stars}
-						initialValue={product.rating.rate}
-						size={20}
-						tooltipDefaultText={`${product.rating.count}`}
-						readonly
-						allowFraction
-					/>
-					<p className="color-grey">({product.rating.count} reviews)</p>
+					<p className="color-grey">
+						<span>{product.rating.rate} ⭐</span> ({product.rating.count} reviews)
+					</p>
 				</div>
 
 				<button className={`btn-primary ${styles.addToCarBtn}`}>Add to cart</button>

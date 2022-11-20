@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { LayoutPages } from "../../components/Layouts/LayoutPages";
 import { Products } from "../../components/Products/Products";
 import { ProductInterface } from "../../interfaces";
 
@@ -8,7 +9,11 @@ interface Props {
 }
 
 const ProductsPage: NextPage<Props> = ({ products, categories }) => {
-	return <Products products={products} categories={categories} />;
+	return (
+		<LayoutPages>
+			<Products products={products} categories={categories} />
+		</LayoutPages>
+	);
 };
 
 export async function getStaticProps() {

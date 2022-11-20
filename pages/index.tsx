@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { BeYourBest } from "../components/BeYourBest/BeYourBest";
 import { LandingHome } from "../components/LandingHome/LandingHome";
+import { LayoutPages } from "../components/Layouts/LayoutPages";
 import { Products } from "../components/Products/Products";
 import { ProductInterface } from "../interfaces/Products";
 
@@ -11,13 +12,15 @@ interface Props {
 
 const HomePage: NextPage<Props> = ({ products, categories }) => {
 	return (
-		<main>
-			<LandingHome />
+		<LayoutPages>
+			<main>
+				<LandingHome />
 
-			<BeYourBest />
+				<BeYourBest />
 
-			<Products products={products} categories={categories} />
-		</main>
+				<Products products={products} categories={categories} />
+			</main>
+		</LayoutPages>
 	);
 };
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LayoutPages } from "../../components/Layouts/LayoutPages";
 import { Product } from "../../components/Products/Product/Product";
 import { ProductInterface } from "../../interfaces";
 import styles from "./singleProduct.module.css";
@@ -14,27 +15,29 @@ export default function ProductPage({ product, relatedProducts }: Props) {
 		console.log(product.title);
 	});
 	return (
-		<div className={styles.container}>
-			<>
-				<Product product={product} fullDescription />
+		<LayoutPages>
+			<div className={styles.container}>
+				<>
+					<Product product={product} fullDescription />
 
-				<div className={styles.relatedProductsContainer}>
-					<h3>Related Products</h3>
+					<div className={styles.relatedProductsContainer}>
+						<h3>Related Products</h3>
 
-					<div className={styles.relatedProducts}>
-						{relatedProducts.map((prod) => (
-							<div className={styles.relatedProducts__card} key={prod.id}>
-								<Link href={`/products/${prod.id}`}>
-									<Image src={prod.image} alt={`${prod.title} Image`} width={100} height={100} />
-									<h4>{prod.title.slice(0, 60)}...</h4>
-									<p>${prod.price}</p>
-								</Link>
-							</div>
-						))}
+						<div className={styles.relatedProducts}>
+							{relatedProducts.map((prod) => (
+								<div className={styles.relatedProducts__card} key={prod.id}>
+									<Link href={`/products/${prod.id}`}>
+										<Image src={prod.image} alt={`${prod.title} Image`} width={100} height={100} />
+										<h4>{prod.title.slice(0, 60)}...</h4>
+										<p>${prod.price}</p>
+									</Link>
+								</div>
+							))}
+						</div>
 					</div>
-				</div>
-			</>
-		</div>
+				</>
+			</div>
+		</LayoutPages>
 	);
 }
 

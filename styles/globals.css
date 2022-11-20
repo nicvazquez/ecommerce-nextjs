@@ -33,6 +33,11 @@ p {
 	margin: 0;
 }
 
+h1,
+h2 {
+	color: var(--primary);
+}
+
 .color-grey {
 	color: rgb(106, 106, 106);
 }

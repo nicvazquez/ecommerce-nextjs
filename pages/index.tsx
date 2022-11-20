@@ -1,3 +1,4 @@
+import { BeYourBest } from "../components/BeYourBest/BeYourBest";
 import { LandingHome } from "../components/LandingHome/LandingHome";
 import { PopulaProducts } from "../components/Products";
 import { Products } from "../interfaces/Products";
@@ -6,6 +7,8 @@ export default function Home({ products }: Products) {
 	return (
 		<main>
 			<LandingHome />
+
+			<BeYourBest />
 
 			<PopulaProducts products={products} />
 		</main>

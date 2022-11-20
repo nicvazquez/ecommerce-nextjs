@@ -34,7 +34,7 @@ export const Product = ({ product }: { product: ProductInterface }) => {
 					<p className="color-grey">({product.rating.count} reviews)</p>
 				</div>
 
-				<button className={styles.addToCarBtn}>Add to cart</button>
+				<button className={`btn-primary ${styles.addToCarBtn}`}>Add to cart</button>
 			</div>
 		</div>
 	);

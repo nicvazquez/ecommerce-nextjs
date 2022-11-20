@@ -91,12 +91,12 @@
 }
 
 .landingInfo__buttons button:first-of-type {
-	background-color: var(--secondary);
+	background-color: var(--primary);
 	margin-bottom: -1px;
 }
 
 .landingInfo__buttons button:first-of-type:hover {
-	background-color: var(--secondaryLight);
+	background-color: var(--primaryLight);
 }
 
 @media (min-width: 768px) {

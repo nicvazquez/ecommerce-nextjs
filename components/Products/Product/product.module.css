@@ -32,17 +32,8 @@
 }
 
 .addToCarBtn {
-	background-color: var(--primary);
-	border: none;
-	color: white;
-	cursor: pointer;
 	margin-top: 2rem;
-	padding: 1rem;
 	width: 100%;
-	transition: 0.2s;
-}
-.addToCarBtn:hover {
-	background-color: var(--primaryDark);
 }
 
 @media (min-width: 768px) {

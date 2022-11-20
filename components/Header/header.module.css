@@ -1,3 +1,11 @@
+.header {
+	box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+	color: var(--primary);
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 .header nav {
 	align-items: center;
 	display: flex;

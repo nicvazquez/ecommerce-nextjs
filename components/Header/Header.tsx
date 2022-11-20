@@ -32,7 +32,11 @@ export const Header = () => {
 				<p>WearTheBest</p>
 
 				<button onClick={() => setShowMenu(!showMenu)}>
-					{showMenu ? <FaTimes /> : <HiMenuAlt2 />}
+					{showMenu ? (
+						<FaTimes fill="var(--primary)" />
+					) : (
+						<HiMenuAlt2 fill="var(--primary)" />
+					)}
 				</button>
 				{showMenu && (
 					<div className={styles.links}>

@@ -11,7 +11,9 @@ interface Props {
 const ProductsPage: NextPage<Props> = ({ products, categories }) => {
 	return (
 		<LayoutPages>
-			<Products products={products} categories={categories} />
+			<div style={{ marginTop: "8rem" }}>
+				<Products products={products} categories={categories} />
+			</div>
 		</LayoutPages>
 	);
 };

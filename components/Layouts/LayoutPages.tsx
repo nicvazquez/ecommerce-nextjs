@@ -9,7 +9,7 @@ export const LayoutPages = ({ children }: Props) => {
 		<div>
 			<Header />
 
-			{children}
+			<div>{children}</div>
 		</div>
 	);
 };

@@ -2,8 +2,14 @@ import { Rating } from "react-simple-star-rating";
 import { Product as ProductInterface } from "../../../interfaces";
 import Image from "next/image";
 import styles from "./product.module.css";
+import Link from "next/link";
 
-export const Product = ({ product }: { product: ProductInterface }) => {
+interface ProductProps {
+	product: ProductInterface;
+	fullDescription?: boolean;
+}
+
+export const Product = ({ product, fullDescription = false }: ProductProps) => {
 	return (
 		<div className={styles.container} key={product.id}>
 			<Image
@@ -16,11 +22,15 @@ export const Product = ({ product }: { product: ProductInterface }) => {
 			<div>
 				<p className="color-grey">{product.category}</p>
 				<div className={styles.titlePrice}>
-					<h3>{product.title}</h3>
+					<h3>
+						<Link href={`/products/${product.id}`}>{product.title}</Link>
+					</h3>
 					<p className={styles.price}>${product.price}</p>
 				</div>
 
-				<p className="color-grey">{product.description.split(".")[0]}.</p>
+				<p className="color-grey">
+					{fullDescription ? product.description : product.description.split(".")[0]}.
+				</p>
 
 				<div className={styles.rating}>
 					<Rating

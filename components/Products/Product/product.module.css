@@ -15,6 +15,15 @@
 	margin-bottom: 1rem;
 }
 
+.titlePrice h3 a {
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+.titlePrice h3 a:hover {
+	text-decoration: underline;
+}
+
 .price {
 	color: green;
 	font-weight: 600;

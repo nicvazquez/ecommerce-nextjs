@@ -27,7 +27,7 @@
 }
 
 .landingInfo__text {
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 }
 
 .landingInfo__text h1 {
@@ -49,6 +49,10 @@
 	}
 	.landingInfo div:nth-child(2) {
 		width: 30%;
+	}
+
+	.landingInfo__text {
+		margin-top: unset;
 	}
 
 	.landingInfo__text h1 {

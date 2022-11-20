@@ -14,7 +14,7 @@
 	font-size: 1.2rem;
 }
 
-.header nav p {
+.header nav .homeLink {
 	font-weight: 700;
 }
 

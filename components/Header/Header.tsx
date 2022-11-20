@@ -31,7 +31,9 @@ export const Header = () => {
 	return (
 		<header className={styles.header}>
 			<nav>
-				<p>WearTheBest</p>
+				<Link className={styles.homeLink} href="/">
+					WearTheBest
+				</Link>
 
 				<button onClick={() => setShowMenu(!showMenu)}>
 					{showMenu ? (

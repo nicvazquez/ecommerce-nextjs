@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Header = () => {
+	const pathname = useRouter().pathname;
 	const [showMenu, setShowMenu] = useState(false);
 
 	const links = [
@@ -18,11 +20,11 @@ export const Header = () => {
 		},
 		{
 			name: "Promo",
-			link: "/",
+			link: "/promo",
 		},
 		{
 			name: "About",
-			link: "/",
+			link: "/about",
 		},
 	];
 
@@ -42,7 +44,12 @@ export const Header = () => {
 					<div className={styles.links}>
 						{links.map((link) => (
 							<div key={link.name}>
-								<Link href={link.link}>{link.name}</Link>
+								<Link
+									style={pathname === link.link ? { fontWeight: "700" } : {}}
+									href={link.link}
+								>
+									{link.name}
+								</Link>
 							</div>
 						))}
 					</div>

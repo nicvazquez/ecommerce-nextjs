@@ -1,5 +1,6 @@
 import styles from "./landingHome.module.css";
 import { FiExternalLink } from "react-icons/fi";
+import Link from "next/link";
 
 export const LandingHome = () => {
 	return (
@@ -15,12 +16,14 @@ export const LandingHome = () => {
 				</div>
 
 				<div className={styles.landingInfo__buttons}>
-					<button>
-						Shop now
-						<span>
-							<FiExternalLink />
-						</span>
-					</button>
+					<Link href={"/products"} target="_blank">
+						<button className={styles.shopNowBtn}>
+							Shop now
+							<span>
+								<FiExternalLink />
+							</span>
+						</button>
+					</Link>
 					<button>
 						See promo
 						<span>

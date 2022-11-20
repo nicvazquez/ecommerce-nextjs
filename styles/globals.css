@@ -44,6 +44,7 @@ h2 {
 .btn-primary,
 .btn-secondary {
 	border: none;
+	border-radius: 3px;
 	color: white;
 	cursor: pointer;
 	padding: 1rem;

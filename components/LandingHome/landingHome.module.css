@@ -94,12 +94,12 @@
 	background-color: #222;
 }
 
-.landingInfo__buttons button:first-of-type {
+.landingInfo__buttons .shopNowBtn {
 	background-color: var(--primary);
 	margin-bottom: -1px;
 }
 
-.landingInfo__buttons button:first-of-type:hover {
+.landingInfo__buttons .shopNowBtn:hover {
 	background-color: var(--primaryLight);
 }
 
